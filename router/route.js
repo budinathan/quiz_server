@@ -7,13 +7,8 @@ const router = Router();
 router
   .route("/questions")
   .get(controller.getQuestions)
-  .post(controller.insertQuestions)
-  .delete(controller.dropQuestion);
+  .post(controller.insertQuestions);
 
-router
-  .route("/result")
-  .get(controller.getResult)
-  .post(controller.storeResult)
-  .delete(controller.dropResult);
+router.route("/result").get(controller.getResult).post(controller.storeResult);
 
 export default router;
